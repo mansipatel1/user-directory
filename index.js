@@ -20,22 +20,22 @@
 
 const form = document.querySelector('#userForm')
 
-
 const handleSubmit = function(ev) {
   ev.preventDefault()
-  const users = document.querySelector("#users")
+  const users = document.querySelector('#users')
   const f = ev.target
   const userName = f.userName.value
-  const age = f.age.value;
-  //users.innerHTML += `<p>${userName}, ${age}</p>`
-    const p =document.createElement('p');
-    p.textContent=`${userName}, ${age}`;
-    users.appendChild(p);
-    
-  f.reset();
-  f.userName.focus();
+  const age = f.age.value
+  const favoriteColor = f.favoriteColor.value
 
+  const p = document.createElement('p')
+  p.textContent = `${userName}, ${age}`
+  p.style.backgroundColor = favoriteColor
+
+  users.appendChild(p)
+
+  f.reset()
+  f.userName.focus()
 }
 
 form.addEventListener('submit', handleSubmit)
-

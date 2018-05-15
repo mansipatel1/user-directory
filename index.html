@@ -8,25 +8,28 @@
 <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h1 class = "greeting">User Directory</h1>
-  <h1  id = "h2" >Second Heading</h1>
-  <p>Welcome, friend</p>
-<br>
-<br>
+        <h1>User Directory</h1>
 
-<form id="userForm">
-        <p>
-          <label for="userName">Name</label>
-          <input type="text" name="userName" autofocus>
-        </p>
-        <label for="age">Age</label>
-        <input type="number" name="age">
-        <br> <br>
-            <button type="submit">Submit</button>
-            <button type="reset">Clear</button>
-</form>
-    
-<div id="users">
+        <form id="userForm">
+          <p>
+            <label for="userName">Name</label>
+            <input type="text" name="userName" autofocus>
+          </p>
+      
+          <p>
+            <label for="age">Age</label>
+            <input type="number" name="age">
+          </p>
+      
+          <p>
+            <label for="favoriteColor">Favorite color</label>
+            <input type="color" name="favoriteColor">
+          </p>
+      
+          <button type="submit">Go</button>
+        </form>
+      
+        <div id="users"></div>
 
 
 </div>
