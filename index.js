@@ -9,4 +9,11 @@ function changeText(ev) {
 
 }
 
+const txtName = document.getElementById("txtName");
+const txtOutput = Document.getElementById("txtOutput");
+
+function changeName() {
+    heading.textContent = txtName.value;
+}
 button.addEventListener('click', changeText);
+
