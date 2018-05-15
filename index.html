@@ -10,19 +10,23 @@
 <body>
   <h1 class = "greeting">User Directory</h1>
   <h1  id = "h2" >Second Heading</h1>
-  <h1>Third Heading</h1>
   <p>Welcome, friend</p>
-
-<button class="greeting">greeting</button>
 <br>
 <br>
 
-<form> 
-<label> Type your name: <br></label>
-<input type  = "text" name = "Name" id ="txtName"/> 
-<input type ="button" value = "submit" onclick = "changeName()"/>
+<form id="userForm">
+        <p>
+          <label for="userName">Name</label>
+          <input type="text" name="userName">
+        </p>
+    
+            <button type="submit">Submit</button>
 </form>
+    
+<div id="users">
 
+
+</div>
 
 
 <script src="index.js"></script>
