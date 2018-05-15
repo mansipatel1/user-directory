@@ -21,18 +21,26 @@
 const form = document.querySelector('#userForm')
 
 const handleSubmit = function(ev) {
-  ev.preventDefault()
-  const users = document.querySelector('#users')
-  const f = ev.target
-  const userName = f.userName.value
-  const age = f.age.value
-  const favoriteColor = f.favoriteColor.value
+  ev.preventDefault();
+  const users = document.querySelector('#users');
+  const f = ev.target;
+  const userName = f.userName.value;
+  const age = f.age.value;
+  const favoriteColor = f.favoriteColor.value;
+  //list.style.backgroundColor = favoriteColor;
 
-  const p = document.createElement('p')
-  p.textContent = `${userName}, ${age}`
-  p.style.backgroundColor = favoriteColor
+  const list = document.createElement('ul')
+  
+  const nameItem = document.createElement('li');
+    nameItem.textContent = `Name: ${userName}`;
+    list.appendChild(nameItem);
 
-  users.appendChild(p)
+  const ageItem = document.createElement('li');
+    ageItem.textContent = `Age: ${age}`;
+    list.appendChild(ageItem);
+
+  
+  users.appendChild(list);
 
   f.reset()
   f.userName.focus()
