@@ -89,9 +89,9 @@ function renderListItem(label, value) {
     ev.preventDefault()
     const form = ev.target
     const user = {
-      'Name': form.userName.value,
-      'Age': form.age.value,
-      'Favorite Color': renderColor(form.favoriteColor.value),
+      'Name:': form.userName.value,
+      'Age:': form.age.value,
+      'Favorite Color:': renderColor(form.favoriteColor.value),
     }
   
     const list = renderList(user)
