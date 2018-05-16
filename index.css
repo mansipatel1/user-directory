@@ -1,14 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
-    font-family: sans-serif;
-    background-color: lavender;
-
-
-    
-
-
+    font-family: 'Montserrat 27px', sans-serif;
+    background-color: mintcream;
+   
 }
+
+
 
 .scrollThing {
     font-size: 250%;
-    color: mediumslateblue;
+    color: black;
 }
+.submitBut {
+    font-size: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #userForm {
+    background-color: #eeeeee;
+    padding: 1rem;
+    border: 1px solid #e3e3e3;
+  }
+  
+  label {
+    display: block;
+  }
+
+dl > li {
+    list-style: none;
+}
+
+dl {
+    padding: 1rem;
+  }
+  
+  dl > li {
+    list-style: none;
+  }
+  
+  dl:nth-of-type(even) {
+    background-color: whitesmoke;
+  }
+
