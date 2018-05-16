@@ -20,6 +20,7 @@
 
 const form = document.querySelector('#userForm')
 
+
 const handleSubmit = function(ev) {
   ev.preventDefault();
   const users = document.querySelector('#users');
@@ -29,7 +30,7 @@ const handleSubmit = function(ev) {
   const favoriteColor = f.favoriteColor.value;
   //list.style.backgroundColor = favoriteColor;
 
-  
+ /* 
 const nameItem = document.createElement('li');
     nameItem.textContent = `Name: ${userName}`;
 
@@ -39,22 +40,47 @@ const ageItem = document.createElement('li');
 
 const colorItem = document.createElement('li');
     colorItem.textContent = `Favorite Color: `;
+   */
+  
+const colorItem = renderListItem('Favorite Color', '');
+colorItem.appendChild(renderColor());
 
-const colorDiv = document.createElement('div');
-    colorDiv.style.backgroundColor = favoriteColor;
-    colorDiv.style.width = '6rem';
-    colorDiv.style.height = '3rem';
-    colorItem.appendChild(colorDiv);
-
+/*
 const list = document.createElement('ul')
-  list.appendChild(nameItem);
-  list.appendChild(ageItem);
-  list.appendChild(colorItem);
-
-  users.appendChild(list);
+  list.appendChild(renderListItem('Name', userName));
+  list.appendChild(renderListItem('Age', age));
+  list.appendChild(renderListItem('Favorite Color', ''));
+  list.appendChild(renderColor(favoriteColor));
+*/
+  users.appendChild(renderList(userName, age, favoriteColor));
 
   f.reset()
   f.userName.focus()
+}
+
+const renderColor = function (favoriteColor) {
+    const colorDiv = document.createElement('div');
+    colorDiv.style.backgroundColor = favoriteColor;
+    colorDiv.style.width = '6rem';
+    colorDiv.style.height = '3rem';
+    return colorDiv;
+}
+
+const renderListItem = function(call, value) {
+    const item = document.createElement('li');
+    item.textContent = `${call}: ${value}`;
+    return item;
+}
+
+const renderList = function(userName, age, favoriteColor) {
+    const list = document.createElement('ul');
+    list.appendChild(renderListItem('Name', userName));
+    list.appendChild(renderListItem('Age', age));
+    list.appendChild(renderListItem('Favorite Color', ''));
+    list.appendChild(renderColor(favoriteColor));
+    return list;
+  
+
 }
 
 form.addEventListener('submit', handleSubmit)
